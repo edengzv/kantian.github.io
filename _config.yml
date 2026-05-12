@@ -1,0 +1,126 @@
+# Jekyll Chirpy Theme - eDeng's Notes
+
+theme: jekyll-theme-chirpy
+
+lang: zh-CN
+
+timezone: Asia/Shanghai
+
+title: eDeng's Notes
+
+tagline: 技术是一场修行
+
+description: >-
+  AI / Systems / Code - 技术笔记与深度解析
+
+url: "https://edengzv.github.io"
+baseurl: "/kantian.github.io"
+
+github:
+  username: edengzv
+
+twitter:
+  username: edeng
+
+social:
+  name: edeng
+  email: edeng@example.com
+  links:
+    - https://github.com/edengzv
+
+theme_mode:
+
+toc: true
+
+comments:
+  provider:
+
+paginate: 10
+
+avatar: "/commons/avatar.jpg"
+
+actions:
+  edit_post:
+    enabled: false
+    url: ""
+    static_url: false
+
+pwa:
+  enabled: false
+  cache:
+    enabled: false
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: false
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+  - ".husky"
+  - ".vscode"
+  - ".devcontainer"
+  - ".github"
+  - ".editorconfig"
+  - "eslint.config.js"
+  - "rollup.config.js"
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
