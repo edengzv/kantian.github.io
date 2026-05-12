@@ -24,9 +24,9 @@ layout: default
 
 <nav class="post-nav">
   {% if page.previous %}
-    <a href="{{ page.previous.url }}" class="post-nav-prev">&laquo; {{ page.previous.title }}</a>
+    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="post-nav-prev">&laquo; {{ page.previous.title }}</a>
   {% endif %}
   {% if page.next %}
-    <a href="{{ page.next.url }}" class="post-nav-next">{{ page.next.title }} &raquo;</a>
+    <a href="{{ page.next.url | prepend: site.baseurl }}" class="post-nav-next">{{ page.next.title }} &raquo;</a>
   {% endif %}
 </nav>
