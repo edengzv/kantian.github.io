@@ -1,0 +1,35 @@
+# Site settings
+title: "eDeng's Notes"
+tagline: "技术是一场修行"
+description: "AI / Systems / Code"
+url: "https://kantian.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:slug/
+paginate: 10
+paginate_path: "/page/:num/"
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: edeng
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

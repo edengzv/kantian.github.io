@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <time>{{ page.date | date: "%Y-%m-%d" }}</time>
+      {% if page.categories.size > 0 %}
+      <span class="post-categories">
+        {% for cat in page.categories %}
+          <span class="category-tag">{{ cat }}</span>
+        {% endfor %}
+      </span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>
+
+<nav class="post-nav">
+  {% if page.previous %}
+    <a href="{{ page.previous.url }}" class="post-nav-prev">&laquo; {{ page.previous.title }}</a>
+  {% endif %}
+  {% if page.next %}
+    <a href="{{ page.next.url }}" class="post-nav-next">{{ page.next.title }} &raquo;</a>
+  {% endif %}
+</nav>
