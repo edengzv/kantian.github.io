@@ -2,8 +2,8 @@
 title: "eDeng's Notes"
 tagline: "技术是一场修行"
 description: "AI / Systems / Code"
-url: "https://kantian.github.io"
-baseurl: ""
+url: "https://edengzv.github.io"
+baseurl: "/kantian.github.io"
 
 # Build settings
 markdown: kramdown
